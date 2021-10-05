@@ -8,7 +8,9 @@ contract STK is ERC20 {
 
     Staking stakingContract;
     
-    constructor() ERC20("STK", "STK") {
+    constructor(
+        address stakingContractAddress
+    ) ERC20("STK", "STK") {
         stakingContract = Staking(stakingContractAddress);
         _mint(msg.sender, 10000);
     }
