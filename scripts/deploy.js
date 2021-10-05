@@ -1,14 +1,7 @@
 async function main() {
-    const RWD = await ethers.getContractFactory('STK');
-    const STK = await ethers.getContractFactory('RWD');
-    const rewardToken = await RWD.deploy();
-    const stakeToken = await STK.deploy();
+    const STK = await ethers.getContractFactory('STK');
+    const stakeToken = await STK.deploy("0xE9aDf4B3C8576d22784662555e6e473594AF5a68");
     console.log('stake address ' + stakeToken.address);
-
-    const Staking = await ethers.getContractFactory('Staking');
-
-    const stakingContract = await Staking.deploy(stakeToken.address, rewardToken.address);
-    console.log('address:', stakingContract.address);
 }
 
 main()

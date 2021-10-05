@@ -180,8 +180,8 @@
       ]
     },
     "/Users/nikhilkulkarni/Documents/staking/contracts/STK.sol": {
-      "lastModificationDate": 1633459838568,
-      "contentHash": "4996e453ab7d61913c1a62efbc12d117",
+      "lastModificationDate": 1633461382360,
+      "contentHash": "fcafeb671bb33e2fcdc4adf4a961de1b",
       "sourceName": "contracts/STK.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -217,8 +217,8 @@
       ]
     },
     "/Users/nikhilkulkarni/Documents/staking/contracts/Staking.sol": {
-      "lastModificationDate": 1633459495118,
-      "contentHash": "52e0b4ea0aca2c125cb4dc9dac16f121",
+      "lastModificationDate": 1633461371373,
+      "contentHash": "335fbe7e57209da37b6679437a6e4cb2",
       "sourceName": "contracts/Staking.sol",
       "solcConfig": {
         "version": "0.8.0",

@@ -35,16 +35,8 @@ contract Staking {
         emit Staked(msg.sender, amount);
     }
 
-    // simple stake. no approval
-    function deposit(uint256 amount) external {
-        require(amount > 0, "Cannot stake nothing");
-        require(stakingToken.balanceOf(msg.sender) >= amount, "Balance too low");
-
-        totalSupply += amount;
-        balances[msg.sender] += amount;
-
-        stakingToken.transferFrom(msg.sender, address(this), amount);
-
+    // simple stake. no approval. only bookeeping
+    function deposit(address tokenAddress, uint256 amount) external {
         emit Staked(msg.sender, amount);
     }
 

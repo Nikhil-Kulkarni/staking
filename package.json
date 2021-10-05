@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "verify-test": "npx hardhat verify --network ropsten 0xE9aDf4B3C8576d22784662555e6e473594AF5a68",
+    "hardhat-node": "npx hardhat node",
+    "deploy-local": "npx hardhat run --network localhost scripts/hardhatDeploy.js",
+    "deploy-test": "npx hardhat run --network ropsten scripts/hardhatDeploy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^4.3.0",
     "chai": "^4.3.4",
