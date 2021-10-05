@@ -1,6 +1,6 @@
 async function main() {
-    const STK = await ethers.getContractFactory('STK');
-    const stakeToken = await STK.deploy("0xE9aDf4B3C8576d22784662555e6e473594AF5a68");
+    const STK = await ethers.getContractFactory('NFT');
+    const stakeToken = await STK.deploy();
     console.log('stake address ' + stakeToken.address);
 }
 

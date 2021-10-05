@@ -8,13 +8,12 @@ contract StakingNFT is IERC721Receiver {
     event Staked(address indexed sender);
     event Widthdrawn(address indexed sender);
     
-    mapping (address => mapping (uint256 => address)) tokenToStakerMap;
+    mapping (address => mapping (uint256 => address)) public tokenToStakerMap;
 
     constructor() {}
 
-    function stake(address nftAddress, uint256 tokenId) external {
+    function stake(address nftAddress, uint256 tokenId) internal {
         tokenToStakerMap[nftAddress][tokenId] = msg.sender;
-        ERC721(nftAddress).safeTransferFrom(msg.sender, address(this), tokenId);
 
         emit Staked(msg.sender);
     }
@@ -28,6 +27,7 @@ contract StakingNFT is IERC721Receiver {
     }
 
     function onERC721Received(address operator, address from, uint256 tokenId, bytes memory data) external override returns (bytes4) {
+        stake(operator, tokenId);
         return bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"));
     }
 
