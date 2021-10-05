@@ -36,7 +36,7 @@ contract Staking {
     }
 
     // simple stake. no approval. only bookeeping
-    function deposit(address tokenAddress, uint256 amount) external {
+    function deposit(uint256 amount) external {
         emit Staked(msg.sender, amount);
     }
 
