@@ -539,8 +539,8 @@
       ]
     },
     "/Users/nikhilkulkarni/Documents/staking/contracts/StakingNFT.sol": {
-      "lastModificationDate": 1633470776347,
-      "contentHash": "fd0389d0096132c7830e2ea76d7734e4",
+      "lastModificationDate": 1633472083182,
+      "contentHash": "5ae90762971e3b2905b1e1a28cf953e9",
       "sourceName": "contracts/StakingNFT.sol",
       "solcConfig": {
         "version": "0.8.0",

@@ -9,7 +9,7 @@ const web3 = new Web3(API_URL);
 
 const contract = require('../artifacts/contracts/StakingNFT.sol/StakingNFT.json');
 
-const contractAddress = '0xf61ea9ACE78dBadb6D0881bd9B347970241A05f6';
+const contractAddress = '0x5beCe8762a80074929895A20DE45a83d85502b33';
 const stakeContract = new web3.eth.Contract(contract.abi, contractAddress);
 
 async function stakeNFT() {
@@ -20,7 +20,7 @@ async function stakeNFT() {
         to: contractAddress,
         gas: 620000,
         nonce: nonce,
-        data: stakeContract.methods.safeTransferFrom(PUBLIC_KEY, "0xf61ea9ACE78dBadb6D0881bd9B347970241A05f6", 321).encodeABI(),
+        data: stakeContract.methods.safeTransferFrom(PUBLIC_KEY, "0x5beCe8762a80074929895A20DE45a83d85502b33", 321).encodeABI(),
     }
 
     const signedTransaction = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
@@ -37,7 +37,7 @@ async function stakeNFT() {
 // stakeNFT();
 
 async function fetchOwner() {
-    const testOutput = await stakeContract.methods.tokenToStakerMap("0xf61ea9ACE78dBadb6D0881bd9B347970241A05f6", 321).call();
+    const testOutput = await stakeContract.methods.tokenToStakerMap("0x1cD8d1d79AA869c5e9EA80964ab883EB56785B7c", 321).call();
     console.log(testOutput);
 };
 fetchOwner();
